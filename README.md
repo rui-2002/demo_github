@@ -1,0 +1,135 @@
+## Github basics
+
+
+Git vs Github :
+
+
+Git : tool which track code over time;
+
+Github : A website where we host our all git repositories, organize our projects
+
+# Git commands:
+
+1. clone : Bring a repo that is hosted somewhere like Github , which not in our local system.
+2. add : track your files and changes in Git
+3. commit : Save the change with help of commit.
+4. push : Upload git commit to a remote repo , like Github
+5 origin : location of our github repo
+6. master : branch we want to push to 
+i.e git push origin master
+
+7. git remote : not exist in locally
+git remote add origin "repo address.git"
+
+
+
+8. to view remote 
+git remote -v (any remote repo connected)
+
+# README.md : md stands for markdown , easy way to format plain text in file
+
+
+
+
+#### 
+
+# la : view for .git folder
+
+# steps :
+
+1. git init
+2. git status : to check status
+3. git add .
+4. git commit -m "created file"
+5. git remote add origin 
+6. git push -u origin master (-u : upstream added for default where we want to always push the code)
+(we can also remove -u , can simply use git push origin master)
+
+
+## conflicts:
+
+1. 'origin' does not appear to be a git repo
+--> it is locally , not connected to anything (not cloned , not created repo on github)
+--> Create a new repo
+git remote add origin "address of repo"
+
+
+
+
+
+###########################################################################################################################################
+
+* Branching :
+
+
+ ---> Master Branch : main branch 
+ ---> Feature Branch :
+ ---> Hot Fix Branch : branch with bug to fix quickly
+
+ * At first the code on main and feature branch will be exactly the same , once we start applying changes to the feature branch those are seen only in feature branch.
+
+
+## to view branch 
+
+git branch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## SSH github : to connect local machine to github
+eg :
+generate key locally using ssh-keygen commands
+
+ssh-keygen -t rsa -b 4096 - C "your github email address"
+
+## ssh command , type of encryption, stregth of encryption
+## give name to key
+## Search for key in .ssh folder
+
+--> testkey (private key) : keep secure on local 
+--> testkey.pub (key which we will upload through github interface)
+ pub stands for : public , i.e (it is okay for other people to see this key)
+
+## How this works
+1. Put public key on github and then everytime we need to connect to github or push code on github then we use private
+key to show github that we are the one who generated the public key
+
+
+2. to open public key :
+
+cat testkey.pub
+
+
+3. Add ssh key in github (testkey.pub)
+
+
+
+## veryfing and connecting public and private key
+i.e add your SSH private key to the ssh-agenet and store your passphrase in keychain. 
