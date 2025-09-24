@@ -3,4 +3,7 @@
 git checkout -b branch_name
 
 
+## Work with branches:
+after working create a PR 
+
 ## When branch is ahead of master :
