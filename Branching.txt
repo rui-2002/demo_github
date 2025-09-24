@@ -7,3 +7,13 @@ git checkout -b branch_name
 after working create a PR 
 
 ## When branch is ahead of master :
+After mergin now remotly both are updated but locally our master branch is behind.
+
+git checkout master
+git pull (if upstream is already setup)
+
+
+
+# we don't use the branches that we have already merged so therefore we will delete this branch.
+
+git branch -d branch_name
