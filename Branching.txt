@@ -17,3 +17,24 @@ git pull (if upstream is already setup)
 # we don't use the branches that we have already merged so therefore we will delete this branch.
 
 git branch -d branch_name
+
+
+
+
+
+
+
+
+
+
+
+
+
+Conflict arise when working and merging branches simulatenously.
+
+
+1. Created another branch (working)
+git checkout -b working
+
+2. for modified files: i.e add files & message
+git commit -am "message"
