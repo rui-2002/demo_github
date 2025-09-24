@@ -1,0 +1,6 @@
+## Create a branch:
+
+git checkout -b branch_name
+
+
+## When branch is ahead of master :
