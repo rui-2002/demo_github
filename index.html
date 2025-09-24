@@ -1,2 +1,507 @@
-<h1>Hello</h1>
-<h2>Guys</h2>
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout branch
+Switched to branch 'branch'
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Branching.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git commit -m "working with branches"
+[branch 3101254] working with branches
+ 1 file changed, 6 insertions(+)
+ create mode 100644 Branching.txt
+(base) rui@rui:~/Desktop/New Folder/github$ git push origin branch
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 398 bytes | 398.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rui-2002/demo_github.git
+   b7c6206..3101254  branch -> branch
+(base) rui@rui:~/Desktop/New Folder/github$ now branch is ahead of main therefor we will raise a PR to merge into main
+Command 'now' not found, did you mean:
+  command 'no3' from snap nitrate (0.0.0)
+  command 'nsw' from snap nsw (0+git.b61ddec)
+  command 'nox' from deb nox (2023.04.22-2)
+  command 'nop' from deb graphviz (2.42.2-9ubuntu0.1)
+  command 'sow' from deb ruby-hoe (3.22.1+dfsg1-3)
+  command 'nw' from deb netrw (1.3.2-3)
+  command 'new' from deb mmh (0.4-6)
+  command 'new' from deb nmh (1.8-1)
+  command 'cow' from deb fl-cow (0.6-7)
+  command 'nom' from deb nom (0.1.5-4)
+See 'snap info <snapname>' for additional versions.
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch branch
+nothing to commit, working tree clean
+(base) rui@rui:~/Desktop/New Folder/github$ git push
+fatal: The current branch branch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin branch
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+(base) rui@rui:~/Desktop/New Folder/github$ git push -u origin branch
+branch 'branch' set up to track 'origin/branch'.
+Everything up-to-date
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch branch
+Your branch is up to date with 'origin/branch'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Branching.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout branch
+M       Branching.txt
+Already on 'branch'
+Your branch is up to date with 'origin/branch'.
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch branch
+Your branch is up to date with 'origin/branch'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Branching.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch branch
+Your branch is up to date with 'origin/branch'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Branching.txt
+
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch branch
+Your branch is up to date with 'origin/branch'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Branching.txt
+
+(base) rui@rui:~/Desktop/New Folder/github$ git commit -m "raise PR"
+[branch daab399] raise PR
+ 1 file changed, 3 insertions(+)
+(base) rui@rui:~/Desktop/New Folder/github$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 419 bytes | 419.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rui-2002/demo_github.git
+   3101254..daab399  branch -> branch
+(base) rui@rui:~/Desktop/New Folder/github$ git merge master
+Already up to date.
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout branch
+Switched to branch 'branch'
+Your branch is up to date with 'origin/branch'.
+(base) rui@rui:~/Desktop/New Folder/github$ git push
+Everything up-to-date
+(base) rui@rui:~/Desktop/New Folder/github$ git push origin branch
+Everything up-to-date
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 885 bytes | 885.00 KiB/s, done.
+From https://github.com/rui-2002/demo_github
+   b7c6206..a270cf2  master     -> origin/master
+Updating b7c6206..a270cf2
+Fast-forward
+ Branching.txt | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+ create mode 100644 Branching.txt
+(base) rui@rui:~/Desktop/New Folder/github$ git branch -d branch
+Deleted branch branch (was daab399).
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Branching.txt
+
+(base) rui@rui:~/Desktop/New Folder/github$ git commit -m "branching completed"
+[master d8e5155] branching completed
+ 1 file changed, 10 insertions(+)
+(base) rui@rui:~/Desktop/New Folder/github$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 557 bytes | 557.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rui-2002/demo_github.git
+   a270cf2..d8e5155  master -> master
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout -b working
+Switched to a new branch 'working'
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        merge_conflict.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) rui@rui:~/Desktop/New Folder/github$ git diff
+(base) rui@rui:~/Desktop/New Folder/github$ git diff master
+(base) rui@rui:~/Desktop/New Folder/github$ git add Branching.txt README.md terminology.txt 
+(base) rui@rui:~/Desktop/New Folder/github$ git commit -m "working with conflicts"
+On branch working
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        merge_conflict.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) rui@rui:~/Desktop/New Folder/github$ git push -u origin working
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'working' on GitHub by visiting:
+remote:      https://github.com/rui-2002/demo_github/pull/new/working
+remote: 
+To https://github.com/rui-2002/demo_github.git
+ * [new branch]      working -> working
+branch 'working' set up to track 'origin/working'.
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is up to date with 'origin/working'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        merge_conflict.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) rui@rui:~/Desktop/New Folder/github$ git commit -am "updated readme.md file"
+On branch working
+Your branch is up to date with 'origin/working'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        merge_conflict.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) rui@rui:~/Desktop/New Folder/github$ git push 
+Everything up-to-date
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is up to date with 'origin/working'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    Branching.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        merge_conflict.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is up to date with 'origin/working'.
+
+nothing to commit, working tree clean
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is up to date with 'origin/working'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Branching.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) rui@rui:~/Desktop/New Folder/github$ git commit -am "updated branching.txt"
+[working ee53a1d] updated branching.txt
+ 1 file changed, 22 insertions(+), 1 deletion(-)
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ here we  don't have changes from the workingand updated the master
+> ^C
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working
+Switched to branch 'working'
+Your branch is ahead of 'origin/working' by 1 commit.
+  (use "git push" to publish your local commits)
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working
+Switched to branch 'working'
+Your branch is ahead of 'origin/working' by 1 commit.
+  (use "git push" to publish your local commits)
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working
+Already on 'working'
+Your branch is ahead of 'origin/working' by 1 commit.
+  (use "git push" to publish your local commits)
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working
+Switched to branch 'working'
+Your branch is ahead of 'origin/working' by 1 commit.
+  (use "git push" to publish your local commits)
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is ahead of 'origin/working' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working
+Switched to branch 'working'
+Your branch is ahead of 'origin/working' by 1 commit.
+  (use "git push" to publish your local commits)
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working
+Switched to branch 'working'
+Your branch is ahead of 'origin/working' by 1 commit.
+  (use "git push" to publish your local commits)
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 509 bytes | 509.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rui-2002/demo_github.git
+   d8e5155..ee53a1d  working -> working
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working 
+A       index.html
+Switched to branch 'working'
+Your branch is up to date with 'origin/working'.
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is up to date with 'origin/working'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+(base) rui@rui:~/Desktop/New Folder/github$ git push origin working 
+Everything up-to-date
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is up to date with 'origin/working'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git commit -m "added file"
+[working 0c41899] added file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 index.html
+(base) rui@rui:~/Desktop/New Folder/github$ git push origin working
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rui-2002/demo_github.git
+   ee53a1d..0c41899  working -> working
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git pull
+remote: Enumerating objects: 2, done.
+remote: Counting objects: 100% (2/2), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (2/2), 1.74 KiB | 1.74 MiB/s, done.
+From https://github.com/rui-2002/demo_github
+   d8e5155..8b14fd0  master     -> origin/master
+Updating d8e5155..8b14fd0
+Fast-forward
+ Branching.txt | 23 ++++++++++++++++++++++-
+ index.html    |  2 ++
+ 2 files changed, 24 insertions(+), 1 deletion(-)
+ create mode 100644 index.html
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working 
+M       index.html
+Switched to branch 'working'
+Your branch is up to date with 'origin/working'.
+(base) rui@rui:~/Desktop/New Folder/github$ git merge master
+Updating 0c41899..8b14fd0
+Fast-forward
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working
+M       index.html
+Already on 'working'
+Your branch is ahead of 'origin/working' by 2 commits.
+  (use "git push" to publish your local commits)
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working
+Switched to branch 'working'
+Your branch is ahead of 'origin/working' by 2 commits.
+  (use "git push" to publish your local commits)
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git commit -m "merge confilict"
+On branch working
+Your branch is ahead of 'origin/working' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) rui@rui:~/Desktop/New Folder/github$ git push 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rui-2002/demo_github.git
+   0c41899..8b14fd0  working -> working
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working 
+Switched to branch 'working'
+Your branch is up to date with 'origin/working'.
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working
+Already on 'working'
+Your branch is up to date with 'origin/working'.
+(base) rui@rui:~/Desktop/New Folder/github$ git merge master
+Already up to date.
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git commit -m "stash"
+On branch working
+Your branch is up to date with 'origin/working'.
+
+nothing to commit, working tree clean
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working
+M       index.html
+Switched to branch 'working'
+Your branch is up to date with 'origin/working'.
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git commit -m "update index.txt in branch"
+[working 1b03c05] update index.txt in branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) rui@rui:~/Desktop/New Folder/github$ git commit -am "update file in master"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+(base) rui@rui:~/Desktop/New Folder/github$ git merge working
+Updating 8b14fd0..1b03c05
+Fast-forward
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) rui@rui:~/Desktop/New Folder/github$ git checkout working
+Switched to branch 'working'
+Your branch is ahead of 'origin/working' by 1 commit.
+  (use "git push" to publish your local commits)
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is ahead of 'origin/working' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) rui@rui:~/Desktop/New Folder/github$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rui-2002/demo_github.git
+   8b14fd0..1b03c05  working -> working
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is up to date with 'origin/working'.
+
+nothing to commit, working tree clean
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is up to date with 'origin/working'.
+
+nothing to commit, working tree clean
+(base) rui@rui:~/Desktop/New Folder/github$ git reset HEAD~1
+Unstaged changes after reset:
+M       index.html
+(base) rui@rui:~/Desktop/New Folder/github$ git diff
+diff --git a/index.html b/index.html
+index 4829a2a..80039d1 100644
+--- a/index.html
++++ b/index.html
+@@ -1,2 +1,2 @@
+ <h1>Hello</h1>
+-<h2>World</h2>
+\ No newline at end of file
++<h2>Guys</h2>
+\ No newline at end of file
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is behind 'origin/working' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) rui@rui:~/Desktop/New Folder/github$ git add .
+(base) rui@rui:~/Desktop/New Folder/github$ git status
+On branch working
+Your branch is behind 'origin/working' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+(base) rui@rui:~/Desktop/New Folder/github$ git reset
+Unstaged changes after reset:
+M       index.html
